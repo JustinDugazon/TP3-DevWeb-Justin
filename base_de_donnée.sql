@@ -9,88 +9,151 @@
 
 -- predefined type, no DDL - XMLTYPE
 
+
+-- Création de la table billet 
 CREATE TABLE billet (
-    id_billet                        INTEGER NOT NULL,
+    id_billet                        NUMBER NOT NULL,
     prix                             FLOAT(40) NOT NULL,
-    repr�sentation_id_repr�sentation INTEGER NOT NULL
+    
 );
+
 
 ALTER TABLE billet ADD CONSTRAINT billet_pk PRIMARY KEY ( id_billet );
 
-CREATE TABLE �v�nement (
-    id_�v�nement INTEGER NOT NULL,
-    nom          VARCHAR2(255) NOT NULL,
+
+-- Insertion de données dans la table billet
+
+INSERT INTO billet (id_billet, prix) VALUES (1323,10.50);
+INSERT INTO billet (id_billet, prix) VALUES (2312,3.99);
+INSERT INTO billet (id_billet, prix) VALUES (3578,2.50);
+INSERT INTO billet (id_billet, prix) VALUES (434,22.99);
+INSERT INTO billet (id_billet, prix) VALUES (575,7.99);
+
+
+COMMIT;
+
+SELECT *
+FROM BILLET;
+
+
+
+-- Création de la table evenement
+CREATE TABLE evenement (
+    id_evenement NUMBER NOT NULL,
+    nom_evenement          VARCHAR2(255) NOT NULL,
     description  VARCHAR2(1000) NOT NULL
 );
 
-ALTER TABLE �v�nement ADD CONSTRAINT �v�nement_pk PRIMARY KEY ( id_�v�nement );
+ALTER TABLE evenement ADD CONSTRAINT evenement_pk PRIMARY KEY ( id_evenement );
 
-CREATE TABLE "Evenement_-_Organisateur" (
-    �v�nement_id_�v�nement       INTEGER NOT NULL,
-    organisateur_id_organisateur INTEGER NOT NULL
-);
+-- Insertion de données dans la table evenement
 
-ALTER TABLE "Evenement_-_Organisateur" ADD CONSTRAINT "Evenement_-_Organisateur_PK" PRIMARY KEY ( �v�nement_id_�v�nement,
-                                                                                                  organisateur_id_organisateur );
+INSERT INTO evenement (id_evenement, nom_evenement, description) VALUES (243, "Festival Oriental","Festival qui célèbre l'histoire de l'Asie");
+INSERT INTO evenement (id_evenement, nom_evenement, description) VALUES (3213, "Festival international de Jazz","Festival qui célèbre l'histoire du Jazz au Québec");
+INSERT INTO evenement (id_evenement, nom_evenement, description) VALUES (123, "Expo de Jeux Vidéos","Venez voir cette exposition des meilleurs jeux vidéos de l'année.");
+INSERT INTO evenement (id_evenement, nom_evenement, description) VALUES (452, "Fan Expo","Venez participer à cette exposition si vous êtes fans de Marvel, DC et d'animées");
 
-CREATE TABLE "Evenement_-_Utilisateur" (
-    �v�nement_id_�v�nement     INTEGER NOT NULL,
-    utilisateur_id_utilisateur INTEGER NOT NULL
-);
 
-ALTER TABLE "Evenement_-_Utilisateur" ADD CONSTRAINT "Evenement_-_Utilisateur_PK" PRIMARY KEY ( �v�nement_id_�v�nement,
-                                                                                                utilisateur_id_utilisateur );
+
+COMMIT;
+
+SELECT *
+FROM EVENEMENT;
+
+
+-- Création de la table organisateur
 
 CREATE TABLE organisateur (
-    id_organisateur INTEGER NOT NULL,
-    nom             VARCHAR2(255) NOT NULL
+    id_organisateur NUMBER NOT NULL,
+    nom_organisateur  VARCHAR2(255) NOT NULL
 );
 
 ALTER TABLE organisateur ADD CONSTRAINT organisateur_pk PRIMARY KEY ( id_organisateur );
 
-CREATE TABLE repr�sentation (
-    id_repr�sentation      INTEGER NOT NULL,
+-- Insertion de données dans la table organisateur
+
+INSERT INTO organisateur (id_organisateur, nom) VALUES (23,"Micheal Jordan");
+INSERT INTO organisateur (id_organisateur, nom) VALUES (2312,"Asuna Yuuki");
+INSERT INTO organisateur (id_organisateur, nom) VALUES (438, "Ezio Auditore");
+INSERT INTO organisateur (id_organisateur, nom) VALUES (483, "Harry Potter");
+INSERT INTO organisateur (id_organisateur, nom) VALUES (1, "Micheal Scofield");
+
+
+COMMIT;
+
+SELECT *
+FROM ORGANISATEUR;
+
+-- Création de la table représentation
+
+CREATE TABLE representation (
+    id_representation      NUMBER NOT NULL,
     "Date"                 DATE NOT NULL,
     heure                  DATE NOT NULL,
-    lieu                   VARCHAR2(255)
-     NOT NULL,
-    �v�nement_id_�v�nement INTEGER NOT NULL
+    lieu                   VARCHAR2(255)NOT NULL,
+    
 );
 
-ALTER TABLE repr�sentation ADD CONSTRAINT repr�sentation_pk PRIMARY KEY ( id_repr�sentation );
+ALTER TABLE representation ADD CONSTRAINT representation_pk PRIMARY KEY ( id_representation );
+
+-- Insertion de données dans la table representation
+
+INSERT INTO representation (id_representation, "Date", heure, lieu) VALUES (231,2024-08-23 , 10:30:00 ,"Centre Bell");
+INSERT INTO representation (id_representation, "Date", heure, lieu) VALUES (34,2024-07-15 , 16:45:00 ,"Place Bell");
+INSERT INTO representation (id_representation, "Date", heure, lieu) VALUES (778,2024-07,3, 12:30:00 , "Place des Arts");
+INSERT INTO representation (id_representation, "Date", heure, lieu) VALUES (53,2024-08,5, 12:00:00 , "Place des Arts");
+INSERT INTO representation (id_representation, "Date", heure, lieu) VALUES (12,2024-07-16, 14:30:00,"Centre Bell");
+
+
+COMMIT;
+
+SELECT *
+FROM REPRESENTATION;
+
+-- Création de la table utilisateur
 
 CREATE TABLE utilisateur (
     id_utilisateur INTEGER NOT NULL,
-    nomutilisateur VARCHAR2(255) NOT NULL,
+    nom_utilisateur VARCHAR2(255) NOT NULL,
     email          VARCHAR2(255) NOT NULL,
-    motdepasse     VARCHAR2(255) NOT NULL
 );
 
 ALTER TABLE utilisateur ADD CONSTRAINT utilisateur_pk PRIMARY KEY ( id_utilisateur );
 
+-- Insertion de données dans la table utilisateur
+
+INSERT INTO utilisateur (id_utilisateur, nom_utilisateur, email) VALUES (22, "lebronfan_123","lebronfan_123@gmail.com");
+INSERT INTO utilisateur (id_utilisateur, nom_utilisateur, email) VALUES (23,"Justin Dugazon","justindugazon1322@gmail.com");
+INSERT INTO utilisateur (id_utilisateur, nom_utilisateur, email) VALUES (45,"Mcfly et Carlito","mcflycarlito@gmail.com");
+INSERT INTO utilisateur (id_utilisateur, nom_utilisateur, email) VALUES (123,"fortnitePlayer_dr23123","fortnitePlayer.dr23123@hotmail.com");
+
+
+
+COMMIT;
+
+SELECT *
+FROM UTILISATEUR;
+
+
 ALTER TABLE billet
-    ADD CONSTRAINT billet_repr�sentation_fk FOREIGN KEY ( repr�sentation_id_repr�sentation )
-        REFERENCES repr�sentation ( id_repr�sentation );
+    ADD CONSTRAINT billet_representation_fk FOREIGN KEY ( representation_id_representation )
+        REFERENCES representation ( id_representation );
 
-ALTER TABLE "Evenement_-_Organisateur"
-    ADD CONSTRAINT "Evenement_-_Organisateur_�v�nement_FK" FOREIGN KEY ( �v�nement_id_�v�nement )
-        REFERENCES �v�nement ( id_�v�nement );
+ALTER TABLE organisateur
+    ADD CONSTRAINT organisateur_evenement_fk FOREIGN KEY ( evenement_id_evenement )
+        REFERENCES evenement ( id_evenement );
 
-ALTER TABLE "Evenement_-_Organisateur"
-    ADD CONSTRAINT "Evenement_-_Organisateur_Organisateur_FK" FOREIGN KEY ( organisateur_id_organisateur )
-        REFERENCES organisateur ( id_organisateur );
 
-ALTER TABLE "Evenement_-_Utilisateur"
-    ADD CONSTRAINT "Evenement_-_Utilisateur_�v�nement_FK" FOREIGN KEY ( �v�nement_id_�v�nement )
-        REFERENCES �v�nement ( id_�v�nement );
+ALTER TABLE utilisateur
+    ADD CONSTRAINT utilisateur_evenement_fk FOREIGN KEY ( evenement_id_evenement )
+        REFERENCES evenement ( id_evenement );
 
-ALTER TABLE "Evenement_-_Utilisateur"
-    ADD CONSTRAINT "Evenement_-_Utilisateur_Utilisateur_FK" FOREIGN KEY ( utilisateur_id_utilisateur )
-        REFERENCES utilisateur ( id_utilisateur );
+ALTER TABLE representation
+    ADD CONSTRAINT representation_evenement_fk FOREIGN KEY ( evenement_id_evenement )
+        REFERENCES evenement ( id_evenement );
 
-ALTER TABLE repr�sentation
-    ADD CONSTRAINT repr�sentation_�v�nement_fk FOREIGN KEY ( �v�nement_id_�v�nement )
-        REFERENCES �v�nement ( id_�v�nement );
+
+
 
 
 
