@@ -1,0 +1,550 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="42A0D95A-0522-C8C3-990F-C284B4368380" mainViewID="FF6DC5B8-9413-D3E9-AFBD-BD60C13892FC">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:44:05 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<Entities>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9EA53CE7-303C-EA4D-2223-3365928CD422" name="Billet">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:07:07 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Billet" id="B76182E0-AB86-168F-3031-EDD1FDB377B6">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:07:20 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Prix" id="15C8A411-ACFC-0D16-C708-EABF38C2E948">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:07:37 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Représentation" id="A82F0FE5-CD32-CDB5-F28B-4243089B67BC">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:08:38 UTC</createdTime>
+<generatorID>4EB7C39E-4BAE-3041-52E9-540706FF4547</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<referedAttribute>496D9EAC-4B0E-7205-994C-94CC977F048A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="62399792-FDD9-DD98-F0EC-3927C6176DB2" name="Billet PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:07:36 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B76182E0-AB86-168F-3031-EDD1FDB377B6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C4D930B0-3BEA-11B4-D72A-54A79AD10588" name="Evenement">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:45:01 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Évènement" id="1D1811DA-1A93-78E0-2AA6-45B756D0AA42">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:45:45 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nom" id="754B07EF-EB3F-4711-4968-50DB960148BD">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:46:16 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Description" id="7D89DF9C-3999-C4DA-7F09-76B87865A1AA">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:46:43 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="03315545-CAC5-4953-0767-49FB87C0396E" name="Evenement PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:46:06 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1D1811DA-1A93-78E0-2AA6-45B756D0AA42</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="490CF62C-871A-B5BD-55D3-55F9241A2CD1" name="Organisateur">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:47:44 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Organisateur" id="7AD6E26C-218D-0E76-9F23-386A5B859E5F">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:47:53 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nom" id="3400F01B-F1CD-8CFD-3422-80D79EA3F6D5">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:48:11 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A2FCA72B-C42A-AD5F-B02B-349605954F5B" name="Organisateur PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:48:10 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7AD6E26C-218D-0E76-9F23-386A5B859E5F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="83BD11FB-E870-76C4-E6AB-6A59968C7F47" name="Représentation">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:03:23 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Représentation" id="496D9EAC-4B0E-7205-994C-94CC977F048A">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:03:31 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Date" id="8E34A11D-9F33-2A8A-EC1F-571DA6CFDFD6">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:03:46 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Heure" id="440F71E2-E41A-C228-3386-9D9A9D46E02C">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:03:46 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Lieu" id="1FAAA7BB-C858-EAB2-0F0E-6A1332D728F8">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:03:46 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Évènement" id="07667E28-F088-4DD3-44B8-5A2EDA13EFC1">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:04:42 UTC</createdTime>
+<generatorID>AFF9E590-85E2-20EF-A7D9-02FD24790206</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<referedAttribute>1D1811DA-1A93-78E0-2AA6-45B756D0AA42</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8B089EC9-6D62-FE5F-CD0C-9B440185AB53" name="Représentation PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:03:39 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>496D9EAC-4B0E-7205-994C-94CC977F048A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9ADBD9A1-FB9C-9413-FFF0-9DCBD6ADA5AA" name="Utilisateur">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:48:29 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Utilisateur" id="9C72BA22-B5C7-9FAD-205C-8E204CC5F65B">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:49:12 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NomUtilisateur" id="E7A8CD8F-1EAE-306C-C591-59DFB8219751">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:49:36 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Email" id="53FC0DD5-8E4F-7931-233E-F5C32A351274">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:49:59 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MotDePasse" id="4231FAA8-3EEC-1F7E-1084-A781D3EF18EB">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:50:08 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E14C8D4D-D2DC-3EE4-EF78-44D0F6BAE38E" name="Utilisateur PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:49:38 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9C72BA22-B5C7-9FAD-205C-8E204CC5F65B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
+</Entities>
+<Relationships>
+<Relationship class="oracle.dbtools.crest.model.design.logical.Relation" name="Évènement - Organisateurs" directorySegmentName="seg_0" id="38B3DD6A-2815-5CC0-EBB3-AED5152EC3C3">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:10:38 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>C4D930B0-3BEA-11B4-D72A-54A79AD10588</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>490CF62C-871A-B5BD-55D3-55F9241A2CD1</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relationship>
+<Relationship class="oracle.dbtools.crest.model.design.logical.Relation" name="Évènement-Représentation" directorySegmentName="seg_0" id="AFF9E590-85E2-20EF-A7D9-02FD24790206">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:04:42 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<sourcePk>03315545-CAC5-4953-0767-49FB87C0396E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C4D930B0-3BEA-11B4-D72A-54A79AD10588</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>83BD11FB-E870-76C4-E6AB-6A59968C7F47</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relationship>
+<Relationship class="oracle.dbtools.crest.model.design.logical.Relation" name="Représentation - Billet" directorySegmentName="seg_0" id="4EB7C39E-4BAE-3041-52E9-540706FF4547">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:08:38 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<sourcePk>8B089EC9-6D62-FE5F-CD0C-9B440185AB53</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>83BD11FB-E870-76C4-E6AB-6A59968C7F47</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9EA53CE7-303C-EA4D-2223-3365928CD422</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="Attribute_1" id="F5F49420-7BE5-07A7-1C06-D94CAD933915">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:08:42 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relationship>
+<Relationship class="oracle.dbtools.crest.model.design.logical.Relation" name="Utilisateur - Evenement" directorySegmentName="seg_0" id="D72C7DE1-56B9-ED74-FC59-0B8B1CAD9C18">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:53:10 UTC</createdTime>
+<comment><![CDATA[Comprends]]></comment>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<engineerTo>
+<item key="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>participer</nameOnSource>
+<nameOnTarget>posséder</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>9ADBD9A1-FB9C-9413-FFF0-9DCBD6ADA5AA</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C4D930B0-3BEA-11B4-D72A-54A79AD10588</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relationship>
+</Relationships>
+<mainView class="oracle.dbtools.crest.swingui.logical.DPVLogical" name="Logical" id="FF6DC5B8-9413-D3E9-AFBD-BD60C13892FC">
+<createdBy>scott</createdBy>
+<modifiedBy>scott</modifiedBy>
+<createdTime>2024-05-21 22:44:23 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="490CF62C-871A-B5BD-55D3-55F9241A2CD1" otype="Entity" vid="AAC59D8D-68DA-A663-C603-0A2F265D2D20">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="627" y="313" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="83BD11FB-E870-76C4-E6AB-6A59968C7F47" otype="Entity" vid="A2317B02-DE69-3B50-14D3-5A2C1A691F9E">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="241" y="520" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="9ADBD9A1-FB9C-9413-FFF0-9DCBD6ADA5AA" otype="Entity" vid="93A6413E-905E-2988-98CA-AC5C347EE77B">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="174" y="70" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="9EA53CE7-303C-EA4D-2223-3365928CD422" otype="Entity" vid="EDC7D88F-2F10-00DF-A857-A36DECEC7E97">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="631" y="520" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="C4D930B0-3BEA-11B4-D72A-54A79AD10588" otype="Entity" vid="65EE8FE2-37C2-3952-4935-038817A3B21C">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="117" y="320" width="251" height="110"/>
+</OView>
+</objectViews>
+<connectors>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="38B3DD6A-2815-5CC0-EBB3-AED5152EC3C3" otype="Relation" vid_source="65EE8FE2-37C2-3952-4935-038817A3B21C" vid_target="AAC59D8D-68DA-A663-C603-0A2F265D2D20">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="368" y="386"/>
+<point x="627" y="386"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="4EB7C39E-4BAE-3041-52E9-540706FF4547" otype="Relation" vid_source="A2317B02-DE69-3B50-14D3-5A2C1A691F9E" vid_target="EDC7D88F-2F10-00DF-A857-A36DECEC7E97">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="411" y="575"/>
+<point x="631" y="575"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="AFF9E590-85E2-20EF-A7D9-02FD24790206" otype="Relation" vid_source="65EE8FE2-37C2-3952-4935-038817A3B21C" vid_target="A2317B02-DE69-3B50-14D3-5A2C1A691F9E">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="304" y="430"/>
+<point x="304" y="520"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="D72C7DE1-56B9-ED74-FC59-0B8B1CAD9C18" otype="Relation" vid_source="93A6413E-905E-2988-98CA-AC5C347EE77B" vid_target="65EE8FE2-37C2-3952-4935-038817A3B21C">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="259" y="180"/>
+<point x="259" y="320"/>
+</points>
+</Connector>
+</connectors>
+</mainView>
+</LogicalDesign>

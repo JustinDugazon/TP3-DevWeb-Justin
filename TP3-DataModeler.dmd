@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="TP3-DataModeler" id="63D8493F-CA9D-92D0-6305-824D7E75234C" version="3.5">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:44:05 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<modelPersistence>2</modelPersistence>
+<capitalNames>false</capitalNames>
+<designId>63D8493F-CA9D-92D0-6305-824D7E75234C</designId>
+</OSDM_Design>

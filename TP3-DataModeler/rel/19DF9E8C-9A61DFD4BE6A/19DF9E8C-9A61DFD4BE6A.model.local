@@ -1,0 +1,758 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="19DF9E8C-52DE-1075-300F-9A61DFD4BE6A" mainViewID="8635F023-0B70-03AF-B0F3-C5AB2DD2DCBF">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:44:14 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+<Tables>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7682E8A5-49A4-EBB4-91DF-56E4963E4892" name="Billet">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>9EA53CE7-303C-EA4D-2223-3365928CD422</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Billet" id="CFC4C2F7-C8FA-B111-ADCB-F29EE1C6F442">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>B76182E0-AB86-168F-3031-EDD1FDB377B6</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Prix" id="961CAC7C-D7E9-9630-9EF9-A31E35C90363">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>15C8A411-ACFC-0D16-C708-EABF38C2E948</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Représentation_ID_Représentation" id="AA2DDDC7-1E03-C564-B2FB-349343C1DA8E">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>A82F0FE5-CD32-CDB5-F28B-4243089B67BC</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C6F75553-50B9-10E8-20FD-3B050CD9FDD4" referredColumn="2C2D59C4-ADD1-95C7-7F6E-0706787FA128"/>
+</associations>
+</Column>
+<Column name="Attribute_1" id="E87EF09A-9639-9A9A-1C57-37E4ED723EA7">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>F5F49420-7BE5-07A7-1C06-D94CAD933915</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>C6F75553-50B9-10E8-20FD-3B050CD9FDD4</dependOnForeignKeyID>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0E1355AD-36CF-A6C7-F677-060369A2465D" name="Billet_PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>62399792-FDD9-DD98-F0EC-3927C6176DB2</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CFC4C2F7-C8FA-B111-ADCB-F29EE1C6F442"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="32A230C1-58F5-BAD5-48DE-57A77FDF16DC" name="Billet_Représentation_FK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>4EB7C39E-4BAE-3041-52E9-540706FF4547</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA2DDDC7-1E03-C564-B2FB-349343C1DA8E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="190D69F5-2EF3-09D0-BD75-C812D318F221" name="Evenement">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>C4D930B0-3BEA-11B4-D72A-54A79AD10588</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Évènement" id="6272E2C6-3C42-0730-6A26-E9379DFCA5EA">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>1D1811DA-1A93-78E0-2AA6-45B756D0AA42</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nom" id="902685D2-3C4E-1DD6-4FA3-6C8973069109">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>754B07EF-EB3F-4711-4968-50DB960148BD</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Description" id="973E5799-BBE6-7CEF-885F-559B12429EB3">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>7D89DF9C-3999-C4DA-7F09-76B87865A1AA</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Date" id="5D92BF2E-6030-8831-9D95-8B2B91A04667">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>6EC5C492-B02E-1A12-67D1-BC4BD7EF7DBE</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Heure" id="B1E3FE2A-2B31-599B-78F2-55441F319650">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>81A09793-3389-7E59-7387-8DEA83594B16</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Lieu" id="0D614386-58EB-B041-13EC-D1A717E3F946">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>32196692-61AC-239A-B436-7719F1CFEF21</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CE1C3D74-0892-8944-AA4A-A5DAEA475B03" name="Evenement_PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>03315545-CAC5-4953-0767-49FB87C0396E</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6272E2C6-3C42-0730-6A26-E9379DFCA5EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6B2B6A9E-A721-2A61-581B-599F529C35F2" name="Évènement_-_Organisateurs">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Evenement_ID_Évènement" id="933F60CB-E2F3-AEB2-18F4-566726AF7A53">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8D0EC215-9E5C-EE2E-B80A-7262DFD47CC4" referredColumn="6272E2C6-3C42-0730-6A26-E9379DFCA5EA"/>
+</associations>
+</Column>
+<Column name="Organisateur_ID_Organisateur" id="09DD0ED4-6A60-E3E8-9AE3-A49DF72D62F5">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="45126593-7D44-78EF-C47E-65C1C1EABCCD" referredColumn="78CC14EE-80EC-678D-C94D-34A1768CF966"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B9FE2A68-9DCC-5F34-1CE8-75E5ABE05A3D" name="Évènement_-_Organisateurs_PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="933F60CB-E2F3-AEB2-18F4-566726AF7A53"/>
+<colUsage columnID="09DD0ED4-6A60-E3E8-9AE3-A49DF72D62F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AFBC1C69-F55B-3E10-3C1D-E52B25057765" name="Évènement_-_Organisateurs_Evenement_FK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>38B3DD6A-2815-5CC0-EBB3-AED5152EC3C3</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="933F60CB-E2F3-AEB2-18F4-566726AF7A53"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="856F7389-C65C-6735-94D6-D0B8FF5664BB" name="Évènement_-_Organisateurs_Organisateur_FK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>38B3DD6A-2815-5CC0-EBB3-AED5152EC3C3</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09DD0ED4-6A60-E3E8-9AE3-A49DF72D62F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="44022426-B34F-F8C2-1392-28136A1CFFA5" name="Organisateur">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>490CF62C-871A-B5BD-55D3-55F9241A2CD1</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Organisateur" id="78CC14EE-80EC-678D-C94D-34A1768CF966">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>7AD6E26C-218D-0E76-9F23-386A5B859E5F</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nom" id="3D2A7501-97CF-D147-C0CB-F279B97E3D28">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>3400F01B-F1CD-8CFD-3422-80D79EA3F6D5</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="296FABB5-2D14-2E74-B6A4-0B19FC56E5D5" name="Organisateur_PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>A2FCA72B-C42A-AD5F-B02B-349605954F5B</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="78CC14EE-80EC-678D-C94D-34A1768CF966"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="37500908-EC59-E23C-D372-C615A3BCFA92" name="Représentation">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>83BD11FB-E870-76C4-E6AB-6A59968C7F47</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Représentation" id="2C2D59C4-ADD1-95C7-7F6E-0706787FA128">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>496D9EAC-4B0E-7205-994C-94CC977F048A</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Date" id="0A682082-8783-53CD-447E-658368EA8089">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>8E34A11D-9F33-2A8A-EC1F-571DA6CFDFD6</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Heure" id="CB3A0E73-08AE-1BE4-F3DC-84064B3D087E">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>440F71E2-E41A-C228-3386-9D9A9D46E02C</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Lieu" id="14632EE7-9A44-4BE4-BF27-F0AE37678B1D">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>1FAAA7BB-C858-EAB2-0F0E-6A1332D728F8</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Evenement_ID_Évènement" id="A89A3370-8108-6FBB-FC51-4085293FDB00">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>07667E28-F088-4DD3-44B8-5A2EDA13EFC1</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FE7BE502-5462-97CA-37BB-82F0A4FC91EC" referredColumn="6272E2C6-3C42-0730-6A26-E9379DFCA5EA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8B31A8DC-36BE-CF91-2402-558323FE5DF3" name="Représentation_PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>8B089EC9-6D62-FE5F-CD0C-9B440185AB53</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C2D59C4-ADD1-95C7-7F6E-0706787FA128"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7B1B74F1-C456-B752-DD92-B805B4459F7A" name="Représentation_Evenement_FK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>AFF9E590-85E2-20EF-A7D9-02FD24790206</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A89A3370-8108-6FBB-FC51-4085293FDB00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="422689E5-65F8-6278-B4B4-B33A5BBFF771" name="Utilisateur">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>9ADBD9A1-FB9C-9413-FFF0-9DCBD6ADA5AA</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Utilisateur" id="00267878-CAC1-2C7C-97E1-CEB02E100774">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>9C72BA22-B5C7-9FAD-205C-8E204CC5F65B</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NomUtilisateur" id="FA56FD48-058C-6480-07D0-AF5374E7C069">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>E7A8CD8F-1EAE-306C-C591-59DFB8219751</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Email" id="A9874859-340B-E10F-58F7-8FEC96966CB8">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>53FC0DD5-8E4F-7931-233E-F5C32A351274</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MotDePasse" id="7CA0D595-032D-C4FE-5310-1CCD2A3AC199">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>4231FAA8-3EEC-1F7E-1084-A781D3EF18EB</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="688DA069-198F-7A38-5AA7-8C41C3D64ED4" name="Utilisateur_PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>E14C8D4D-D2DC-3EE4-EF78-44D0F6BAE38E</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00267878-CAC1-2C7C-97E1-CEB02E100774"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E5F749CC-2E46-159F-2270-6AEAB2A6659E" name="Utilisateur_-_Evenement">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<comment><![CDATA[Comprends]]></comment>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Utilisateur_ID" id="E3AE4E9E-516B-1768-9C2D-915A4554AD2D">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6C472887-0456-ED79-8D6D-A2CA4282A844" referredColumn="00267878-CAC1-2C7C-97E1-CEB02E100774"/>
+</associations>
+</Column>
+<Column name="Evenement_ID" id="7C75BEC8-D7F3-46F4-701B-DDD94B170777">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0CE65D2C-D69F-1C49-7A2B-88990416D32C" referredColumn="6272E2C6-3C42-0730-6A26-E9379DFCA5EA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="60B2C1D2-7B56-243C-FCE6-E7A2AA693434" name="Utilisateur_-_Evenement_PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3AE4E9E-516B-1768-9C2D-915A4554AD2D"/>
+<colUsage columnID="7C75BEC8-D7F3-46F4-701B-DDD94B170777"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2C0FF591-D28E-B2E9-213E-132C3E82DEF2" name="Utilisateur_-_Evenement_Utilisateur_FK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>D72C7DE1-56B9-ED74-FC59-0B8B1CAD9C18</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3AE4E9E-516B-1768-9C2D-915A4554AD2D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="360CF09F-BAD5-F4D6-E148-179025803CE2" name="Utilisateur_-_Evenement_Evenement_FK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>D72C7DE1-56B9-ED74-FC59-0B8B1CAD9C18</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C75BEC8-D7F3-46F4-701B-DDD94B170777"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
+</Tables>
+<ForeignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C6F75553-50B9-10E8-20FD-3B050CD9FDD4" containerWithKeyObject="7682E8A5-49A4-EBB4-91DF-56E4963E4892" localFKIndex="32A230C1-58F5-BAD5-48DE-57A77FDF16DC" name="Billet_Représentation_FK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>4EB7C39E-4BAE-3041-52E9-540706FF4547</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<referredTableLongName>Représentation</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>37500908-EC59-E23C-D372-C615A3BCFA92</referredTableID>
+<keyObject>8B31A8DC-36BE-CF91-2402-558323FE5DF3</keyObject>
+<referredKeyID>8B31A8DC-36BE-CF91-2402-558323FE5DF3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Représentation</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8D0EC215-9E5C-EE2E-B80A-7262DFD47CC4" containerWithKeyObject="6B2B6A9E-A721-2A61-581B-599F529C35F2" localFKIndex="AFBC1C69-F55B-3E10-3C1D-E52B25057765" name="Évènement_-_Organisateurs_Evenement_FK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>38B3DD6A-2815-5CC0-EBB3-AED5152EC3C3</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<referredTableLongName>Evenement</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>190D69F5-2EF3-09D0-BD75-C812D318F221</referredTableID>
+<keyObject>CE1C3D74-0892-8944-AA4A-A5DAEA475B03</keyObject>
+<referredKeyID>CE1C3D74-0892-8944-AA4A-A5DAEA475B03</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Évènement</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="45126593-7D44-78EF-C47E-65C1C1EABCCD" containerWithKeyObject="6B2B6A9E-A721-2A61-581B-599F529C35F2" localFKIndex="856F7389-C65C-6735-94D6-D0B8FF5664BB" name="Évènement_-_Organisateurs_Organisateur_FK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>38B3DD6A-2815-5CC0-EBB3-AED5152EC3C3</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<referredTableLongName>Organisateur</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>44022426-B34F-F8C2-1392-28136A1CFFA5</referredTableID>
+<keyObject>296FABB5-2D14-2E74-B6A4-0B19FC56E5D5</keyObject>
+<referredKeyID>296FABB5-2D14-2E74-B6A4-0B19FC56E5D5</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Organisateur</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FE7BE502-5462-97CA-37BB-82F0A4FC91EC" containerWithKeyObject="37500908-EC59-E23C-D372-C615A3BCFA92" localFKIndex="7B1B74F1-C456-B752-DD92-B805B4459F7A" name="Représentation_Evenement_FK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 23:15:27 UTC</createdTime>
+<generatorID>AFF9E590-85E2-20EF-A7D9-02FD24790206</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<referredTableLongName>Evenement</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>190D69F5-2EF3-09D0-BD75-C812D318F221</referredTableID>
+<keyObject>CE1C3D74-0892-8944-AA4A-A5DAEA475B03</keyObject>
+<referredKeyID>CE1C3D74-0892-8944-AA4A-A5DAEA475B03</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Évènement</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0CE65D2C-D69F-1C49-7A2B-88990416D32C" containerWithKeyObject="E5F749CC-2E46-159F-2270-6AEAB2A6659E" localFKIndex="360CF09F-BAD5-F4D6-E148-179025803CE2" name="Utilisateur_-_Evenement_Evenement_FK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<generatorID>D72C7DE1-56B9-ED74-FC59-0B8B1CAD9C18</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<referredTableLongName>Evenement</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>190D69F5-2EF3-09D0-BD75-C812D318F221</referredTableID>
+<keyObject>CE1C3D74-0892-8944-AA4A-A5DAEA475B03</keyObject>
+<referredKeyID>CE1C3D74-0892-8944-AA4A-A5DAEA475B03</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Évènement</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="6C472887-0456-ED79-8D6D-A2CA4282A844" containerWithKeyObject="E5F749CC-2E46-159F-2270-6AEAB2A6659E" localFKIndex="2C0FF591-D28E-B2E9-213E-132C3E82DEF2" name="Utilisateur_-_Evenement_Utilisateur_FK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<comment><![CDATA[Comprend
+]]></comment>
+<generatorID>D72C7DE1-56B9-ED74-FC59-0B8B1CAD9C18</generatorID>
+<ownerDesignName>TP3-DataModeler</ownerDesignName>
+<referredTableLongName>Utilisateur</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>422689E5-65F8-6278-B4B4-B33A5BBFF771</referredTableID>
+<keyObject>688DA069-198F-7A38-5AA7-8C41C3D64ED4</keyObject>
+<referredKeyID>688DA069-198F-7A38-5AA7-8C41C3D64ED4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Utilisateur</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</ForeignKey>
+</ForeignKeys>
+<mainView class="oracle.dbtools.crest.swingui.relational.DPVRelational" name="Relational_1" id="8635F023-0B70-03AF-B0F3-C5AB2DD2DCBF">
+<createdBy>scott</createdBy>
+<modifiedBy>scott</modifiedBy>
+<createdTime>2024-05-21 22:54:34 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="190D69F5-2EF3-09D0-BD75-C812D318F221" otype="Table" vid="54710479-87FC-FB39-7FD0-E3DCDA77ECF3">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="190" y="343" width="251" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="37500908-EC59-E23C-D372-C615A3BCFA92" otype="Table" vid="8550B038-7136-E213-9CCD-141BFF443E12">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="241" y="520" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="422689E5-65F8-6278-B4B4-B33A5BBFF771" otype="Table" vid="FA64843B-69C1-04A6-1DBC-F5B5D279BBA8">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="174" y="24" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="44022426-B34F-F8C2-1392-28136A1CFFA5" otype="Table" vid="FCC30D1D-D9D2-653A-4125-BC83CAB167DC">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="902" y="333" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="6B2B6A9E-A721-2A61-581B-599F529C35F2" otype="Table" vid="5637FD13-2702-12AB-2F90-3EF954411031">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="593" y="292" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="7682E8A5-49A4-EBB4-91DF-56E4963E4892" otype="Table" vid="2473270D-7315-86F1-73AC-242A7A991B20">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="631" y="520" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="E5F749CC-2E46-159F-2270-6AEAB2A6659E" otype="Table" vid="F4C8A5CC-BF64-DD55-F89C-2A3476994B82">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="193" y="209" width="170" height="110"/>
+</OView>
+</objectViews>
+<connectors>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="0CE65D2C-D69F-1C49-7A2B-88990416D32C" otype="FKIndexAssociation" vid_source="54710479-87FC-FB39-7FD0-E3DCDA77ECF3" vid_target="F4C8A5CC-BF64-DD55-F89C-2A3476994B82">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="278" y="343"/>
+<point x="278" y="319"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="45126593-7D44-78EF-C47E-65C1C1EABCCD" otype="FKIndexAssociation" vid_source="FCC30D1D-D9D2-653A-4125-BC83CAB167DC" vid_target="5637FD13-2702-12AB-2F90-3EF954411031">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="902" y="367"/>
+<point x="763" y="367"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="6C472887-0456-ED79-8D6D-A2CA4282A844" otype="FKIndexAssociation" vid_source="FA64843B-69C1-04A6-1DBC-F5B5D279BBA8" vid_target="F4C8A5CC-BF64-DD55-F89C-2A3476994B82">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="268" y="134"/>
+<point x="268" y="209"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="8D0EC215-9E5C-EE2E-B80A-7262DFD47CC4" otype="FKIndexAssociation" vid_source="54710479-87FC-FB39-7FD0-E3DCDA77ECF3" vid_target="5637FD13-2702-12AB-2F90-3EF954411031">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="441" y="372"/>
+<point x="593" y="372"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="C6F75553-50B9-10E8-20FD-3B050CD9FDD4" otype="FKIndexAssociation" vid_source="8550B038-7136-E213-9CCD-141BFF443E12" vid_target="2473270D-7315-86F1-73AC-242A7A991B20">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="411" y="575"/>
+<point x="631" y="575"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="FE7BE502-5462-97CA-37BB-82F0A4FC91EC" otype="FKIndexAssociation" vid_source="54710479-87FC-FB39-7FD0-E3DCDA77ECF3" vid_target="8550B038-7136-E213-9CCD-141BFF443E12">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="326" y="453"/>
+<point x="326" y="520"/>
+</points>
+</Connector>
+</connectors>
+</mainView>
+</relationalModel>
