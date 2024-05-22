@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1F9A192B-0B3A-DAA5-5297-9CA052E4B87B" name="Organisateur">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-22 22:36:35 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="821463D3-1C89-15EA-0935-95F5D30D8608" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Organisateur" id="E8BE0BAC-FEB5-3124-CF20-275396B917EF">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-22 22:36:43 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="821463D3-1C89-15EA-0935-95F5D30D8608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nom" id="112FCF63-4C96-9EB2-0AD4-EB48897E55F2">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-22 22:36:43 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="821463D3-1C89-15EA-0935-95F5D30D8608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B9C47305-3DE8-D846-A678-EBE6556AD3C9" name="Organisateur PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-22 22:36:57 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="821463D3-1C89-15EA-0935-95F5D30D8608" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E8BE0BAC-FEB5-3124-CF20-275396B917EF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

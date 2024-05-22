@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="DataModeler" id="7E6A6217-4E04-E255-305B-EAD1E568E34D" version="3.5">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-22 22:32:42 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>7E6A6217-4E04-E255-305B-EAD1E568E34D</designId>
+</OSDM_Design>

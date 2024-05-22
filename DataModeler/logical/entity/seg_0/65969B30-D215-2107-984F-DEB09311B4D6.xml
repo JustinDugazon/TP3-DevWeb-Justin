@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="65969B30-D215-2107-984F-DEB09311B4D6" name="Représentation">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-22 22:37:16 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="821463D3-1C89-15EA-0935-95F5D30D8608" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Représentation" id="574BEA32-F418-8E65-17FF-535F296FA456">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-22 22:37:27 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="821463D3-1C89-15EA-0935-95F5D30D8608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Date" id="556993CE-1A01-3466-159F-A7A34A946D0C">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-22 22:37:29 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="821463D3-1C89-15EA-0935-95F5D30D8608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Heure" id="E8D074A9-555B-ED6E-92B0-36F4319FA486">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-22 22:37:29 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="821463D3-1C89-15EA-0935-95F5D30D8608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Lieu" id="BBAEDB08-BC42-9745-B0DB-E94AC3785F6C">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-22 22:37:29 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="821463D3-1C89-15EA-0935-95F5D30D8608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Évènement" id="3711DC28-C2B6-1890-DEA7-026C6652D8DA">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-22 22:39:48 UTC</createdTime>
+<generatorID>1FE62814-E8F0-A3F3-E9B3-C9FDD52765A7</generatorID>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="821463D3-1C89-15EA-0935-95F5D30D8608" value="true"/>
+</engineerTo>
+<referedAttribute>17834E9F-F5BF-B6E0-A9D4-4E74C7F48011</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4B8375FF-9129-A18A-D7D3-C5306678FE3D" name="Représentation PK">
+<createdBy>scott</createdBy>
+<createdTime>2024-05-22 22:37:37 UTC</createdTime>
+<ownerDesignName>DataModeler</ownerDesignName>
+<engineerTo>
+<item key="821463D3-1C89-15EA-0935-95F5D30D8608" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>574BEA32-F418-8E65-17FF-535F296FA456</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
