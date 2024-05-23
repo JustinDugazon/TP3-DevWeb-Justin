@@ -10,155 +10,422 @@
 -- predefined type, no DDL - XMLTYPE
 
 
--- Création de la table billet 
-CREATE TABLE billet (
-    id_billet                        NUMBER NOT NULL,
-    prix                             FLOAT(40) NOT NULL,
-    
+-- Création de la table billet
+CREATE TABLE BILLET (
+    ID_BILLET NUMBER NOT NULL,
+    PRIX FLOAT(40) NOT NULL,
 );
 
-
-ALTER TABLE billet ADD CONSTRAINT billet_pk PRIMARY KEY ( id_billet );
-
+ALTER TABLE BILLET ADD CONSTRAINT BILLET_PK PRIMARY KEY ( ID_BILLET );
 
 -- Insertion de données dans la table billet
 
-INSERT INTO billet (id_billet, prix) VALUES (1323,10.50);
-INSERT INTO billet (id_billet, prix) VALUES (2312,3.99);
-INSERT INTO billet (id_billet, prix) VALUES (3578,2.50);
-INSERT INTO billet (id_billet, prix) VALUES (434,22.99);
-INSERT INTO billet (id_billet, prix) VALUES (575,7.99);
+INSERT INTO BILLET (
+    ID_BILLET,
+    PRIX
+) VALUES (
+    1323,
+    10.50
+);
 
+INSERT INTO BILLET (
+    ID_BILLET,
+    PRIX
+) VALUES (
+    2312,
+    3.99
+);
+
+INSERT INTO BILLET (
+    ID_BILLET,
+    PRIX
+) VALUES (
+    3578,
+    2.50
+);
+
+INSERT INTO BILLET (
+    ID_BILLET,
+    PRIX
+) VALUES (
+    434,
+    22.99
+);
+
+INSERT INTO BILLET (
+    ID_BILLET,
+    PRIX
+) VALUES (
+    575,
+    7.99
+);
 
 COMMIT;
 
-SELECT *
-FROM BILLET;
-
-
+SELECT
+    *
+FROM
+    BILLET;
 
 -- Création de la table evenement
-CREATE TABLE evenement (
-    id_evenement NUMBER NOT NULL,
-    nom_evenement          VARCHAR2(255) NOT NULL,
-    description  VARCHAR2(1000) NOT NULL
+CREATE TABLE EVENEMENT (
+    ID_EVENEMENT NUMBER NOT NULL,
+    NOM_EVENEMENT VARCHAR2(255) NOT NULL,
+    DESCRIPTION VARCHAR2(1000) NOT NULL
 );
 
-ALTER TABLE evenement ADD CONSTRAINT evenement_pk PRIMARY KEY ( id_evenement );
+ALTER TABLE EVENEMENT ADD CONSTRAINT EVENEMENT_PK PRIMARY KEY ( ID_EVENEMENT );
 
 -- Insertion de données dans la table evenement
 
-INSERT INTO evenement (id_evenement, nom_evenement, description) VALUES (243, "Festival Oriental","Festival qui célèbre l'histoire de l'Asie");
-INSERT INTO evenement (id_evenement, nom_evenement, description) VALUES (3213, "Festival international de Jazz","Festival qui célèbre l'histoire du Jazz au Québec");
-INSERT INTO evenement (id_evenement, nom_evenement, description) VALUES (123, "Expo de Jeux Vidéos","Venez voir cette exposition des meilleurs jeux vidéos de l'année.");
-INSERT INTO evenement (id_evenement, nom_evenement, description) VALUES (452, "Fan Expo","Venez participer à cette exposition si vous êtes fans de Marvel, DC et d'animées");
+INSERT INTO EVENEMENT (
+    ID_EVENEMENT,
+    NOM_EVENEMENT,
+    DESCRIPTION
+) VALUES (
+    243,
+    "Festival Oriental",
+    "Festival qui célèbre l'histoire de l'Asie"
+);
 
+INSERT INTO EVENEMENT (
+    ID_EVENEMENT,
+    NOM_EVENEMENT,
+    DESCRIPTION
+) VALUES (
+    3213,
+    "Festival international de Jazz",
+    "Festival qui célèbre l'histoire du Jazz au Québec"
+);
 
+INSERT INTO EVENEMENT (
+    ID_EVENEMENT,
+    NOM_EVENEMENT,
+    DESCRIPTION
+) VALUES (
+    123,
+    "Expo de Jeux Vidéos",
+    "Venez voir cette exposition des meilleurs jeux vidéos de l'année."
+);
+
+INSERT INTO EVENEMENT (
+    ID_EVENEMENT,
+    NOM_EVENEMENT,
+    DESCRIPTION
+) VALUES (
+    452,
+    "Fan Expo",
+    "Venez participer à cette exposition si vous êtes fans de Marvel, DC et d'animées"
+);
 
 COMMIT;
 
-SELECT *
-FROM EVENEMENT;
-
+SELECT
+    *
+FROM
+    EVENEMENT;
 
 -- Création de la table organisateur
 
-CREATE TABLE organisateur (
-    id_organisateur NUMBER NOT NULL,
-    nom_organisateur  VARCHAR2(255) NOT NULL
+CREATE TABLE ORGANISATEUR (
+    ID_ORGANISATEUR NUMBER NOT NULL,
+    NOM_ORGANISATEUR VARCHAR2(255) NOT NULL
 );
 
-ALTER TABLE organisateur ADD CONSTRAINT organisateur_pk PRIMARY KEY ( id_organisateur );
+ALTER TABLE ORGANISATEUR ADD CONSTRAINT ORGANISATEUR_PK PRIMARY KEY ( ID_ORGANISATEUR );
 
 -- Insertion de données dans la table organisateur
 
-INSERT INTO organisateur (id_organisateur, nom) VALUES (23,"Micheal Jordan");
-INSERT INTO organisateur (id_organisateur, nom) VALUES (2312,"Asuna Yuuki");
-INSERT INTO organisateur (id_organisateur, nom) VALUES (438, "Ezio Auditore");
-INSERT INTO organisateur (id_organisateur, nom) VALUES (483, "Harry Potter");
-INSERT INTO organisateur (id_organisateur, nom) VALUES (1, "Micheal Scofield");
+INSERT INTO ORGANISATEUR (
+    ID_ORGANISATEUR,
+    NOM
+) VALUES (
+    23,
+    "Micheal Jordan"
+);
 
+INSERT INTO ORGANISATEUR (
+    ID_ORGANISATEUR,
+    NOM
+) VALUES (
+    2312,
+    "Asuna Yuuki"
+);
+
+INSERT INTO ORGANISATEUR (
+    ID_ORGANISATEUR,
+    NOM
+) VALUES (
+    438,
+    "Ezio Auditore"
+);
+
+INSERT INTO ORGANISATEUR (
+    ID_ORGANISATEUR,
+    NOM
+) VALUES (
+    483,
+    "Harry Potter"
+);
+
+INSERT INTO ORGANISATEUR (
+    ID_ORGANISATEUR,
+    NOM
+) VALUES (
+    1,
+    "Micheal Scofield"
+);
 
 COMMIT;
 
-SELECT *
-FROM ORGANISATEUR;
+SELECT
+    *
+FROM
+    ORGANISATEUR;
 
 -- Création de la table représentation
 
-CREATE TABLE representation (
-    id_representation      NUMBER NOT NULL,
-    "Date"                 DATE NOT NULL,
-    heure                  DATE NOT NULL,
-    lieu                   VARCHAR2(255)NOT NULL,
-    
+CREATE TABLE REPRESENTATION (
+    ID_REPRESENTATION NUMBER NOT NULL,
+    "Date" DATE NOT NULL,
+    HEURE DATE NOT NULL,
+    LIEU VARCHAR2(255)NOT NULL,
 );
 
-ALTER TABLE representation ADD CONSTRAINT representation_pk PRIMARY KEY ( id_representation );
+ALTER TABLE REPRESENTATION ADD CONSTRAINT REPRESENTATION_PK PRIMARY KEY ( ID_REPRESENTATION );
 
 -- Insertion de données dans la table representation
 
-INSERT INTO representation (id_representation, "Date", heure, lieu) VALUES (231,2024-08-23 , 10:30:00 ,"Centre Bell");
-INSERT INTO representation (id_representation, "Date", heure, lieu) VALUES (34,2024-07-15 , 16:45:00 ,"Place Bell");
-INSERT INTO representation (id_representation, "Date", heure, lieu) VALUES (778,2024-07,3, 12:30:00 , "Place des Arts");
-INSERT INTO representation (id_representation, "Date", heure, lieu) VALUES (53,2024-08,5, 12:00:00 , "Place des Arts");
-INSERT INTO representation (id_representation, "Date", heure, lieu) VALUES (12,2024-07-16, 14:30:00,"Centre Bell");
+INSERT INTO REPRESENTATION (
+    ID_REPRESENTATION,
+    "Date",
+    HEURE,
+    LIEU
+) VALUES (
+    231,
+    2024-08-23,
+    10:30:00,
+    "Centre Bell"
+);
 
+INSERT INTO REPRESENTATION (
+    ID_REPRESENTATION,
+    "Date",
+    HEURE,
+    LIEU
+) VALUES (
+    34,
+    2024-07-15,
+    16:45:00,
+    "Place Bell"
+);
+
+INSERT INTO REPRESENTATION (
+    ID_REPRESENTATION,
+    "Date",
+    HEURE,
+    LIEU
+) VALUES (
+    778,
+    2024-07,
+    3,
+    12:30:00,
+    "Place des Arts"
+);
+
+INSERT INTO REPRESENTATION (
+    ID_REPRESENTATION,
+    "Date",
+    HEURE,
+    LIEU
+) VALUES (
+    53,
+    2024-08,
+    5,
+    12:00:00,
+    "Place des Arts"
+);
+
+INSERT INTO REPRESENTATION (
+    ID_REPRESENTATION,
+    "Date",
+    HEURE,
+    LIEU
+) VALUES (
+    12,
+    2024-07-16,
+    14:30:00,
+    "Centre Bell"
+);
 
 COMMIT;
 
-SELECT *
-FROM REPRESENTATION;
+SELECT
+    *
+FROM
+    REPRESENTATION;
 
 -- Création de la table utilisateur
 
-CREATE TABLE utilisateur (
-    id_utilisateur INTEGER NOT NULL,
-    nom_utilisateur VARCHAR2(255) NOT NULL,
-    email          VARCHAR2(255) NOT NULL,
+CREATE TABLE UTILISATEUR (
+    ID_UTILISATEUR INTEGER NOT NULL,
+    NOM_UTILISATEUR VARCHAR2(255) NOT NULL,
+    EMAIL VARCHAR2(255) NOT NULL,
 );
 
-ALTER TABLE utilisateur ADD CONSTRAINT utilisateur_pk PRIMARY KEY ( id_utilisateur );
+ALTER TABLE UTILISATEUR ADD CONSTRAINT UTILISATEUR_PK PRIMARY KEY ( ID_UTILISATEUR );
 
 -- Insertion de données dans la table utilisateur
 
-INSERT INTO utilisateur (id_utilisateur, nom_utilisateur, email) VALUES (22, "lebronfan_123","lebronfan_123@gmail.com");
-INSERT INTO utilisateur (id_utilisateur, nom_utilisateur, email) VALUES (23,"Justin Dugazon","justindugazon1322@gmail.com");
-INSERT INTO utilisateur (id_utilisateur, nom_utilisateur, email) VALUES (45,"Mcfly et Carlito","mcflycarlito@gmail.com");
-INSERT INTO utilisateur (id_utilisateur, nom_utilisateur, email) VALUES (123,"fortnitePlayer_dr23123","fortnitePlayer.dr23123@hotmail.com");
+INSERT INTO UTILISATEUR (
+    ID_UTILISATEUR,
+    NOM_UTILISATEUR,
+    EMAIL
+) VALUES (
+    22,
+    "lebronfan_123",
+    "lebronfan_123@gmail.com"
+);
 
+INSERT INTO UTILISATEUR (
+    ID_UTILISATEUR,
+    NOM_UTILISATEUR,
+    EMAIL
+) VALUES (
+    23,
+    "Justin Dugazon",
+    "justindugazon1322@gmail.com"
+);
 
+INSERT INTO UTILISATEUR (
+    ID_UTILISATEUR,
+    NOM_UTILISATEUR,
+    EMAIL
+) VALUES (
+    45,
+    "Mcfly et Carlito",
+    "mcflycarlito@gmail.com"
+);
+
+INSERT INTO UTILISATEUR (
+    ID_UTILISATEUR,
+    NOM_UTILISATEUR,
+    EMAIL
+) VALUES (
+    123,
+    "fortnitePlayer_dr23123",
+    "fortnitePlayer.dr23123@hotmail.com"
+);
 
 COMMIT;
 
+SELECT
+    *
+FROM
+    UTILISATEUR;
+
+ALTER TABLE BILLET ADD CONSTRAINT BILLET_REPRESENTATION_FK FOREIGN KEY ( REPRESENTATION_ID_REPRESENTATION ) REFERENCES REPRESENTATION ( ID_REPRESENTATION );
+
+ALTER TABLE ORGANISATEUR ADD CONSTRAINT ORGANISATEUR_EVENEMENT_FK FOREIGN KEY ( EVENEMENT_ID_EVENEMENT ) REFERENCES EVENEMENT ( ID_EVENEMENT );
+
+ALTER TABLE UTILISATEUR ADD CONSTRAINT UTILISATEUR_EVENEMENT_FK FOREIGN KEY ( EVENEMENT_ID_EVENEMENT ) REFERENCES EVENEMENT ( ID_EVENEMENT );
+
+ALTER TABLE REPRESENTATION ADD CONSTRAINT REPRESENTATION_EVENEMENT_FK FOREIGN KEY ( EVENEMENT_ID_EVENEMENT ) REFERENCES EVENEMENT ( ID_EVENEMENT );
+
+-- Ceci va creer un URI sous le URL qui pourra etre utilise pour y activer les tables en mode REST
+BEGIN
+  ORDS.enable_schema(
+    p_enabled             => TRUE,
+    p_schema              => 'RESTSCOTT',
+    p_url_mapping_type    => 'BASE_PATH',
+    p_url_mapping_pattern => 'hr2',
+    p_auto_rest_auth      => FALSE
+  );
+    
+  COMMIT;
+END;
+/
+
+-- Activation de la table billet pour acces REST
+BEGIN
+  ORDS.enable_object (
+    p_enabled      => TRUE, -- Default  { TRUE | FALSE }
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'BILLET',
+    p_object_type  => 'TABLE', -- Default  { TABLE | VIEW }
+    p_object_alias => 'billet'
+  );
+    
+  COMMIT;
+END;
+/
+
+-- Activation de la table evenement hotel pour acces REST
+BEGIN
+  ORDS.enable_object (
+    p_enabled      => TRUE, -- Default  { TRUE | FALSE }
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'EVENEMENT',
+    p_object_type  => 'TABLE', -- Default  { TABLE | VIEW }
+    p_object_alias => 'evenement'
+  );
+    
+  COMMIT;
+END;
+/
+
+-- Activation de la table organisateur pour acces REST
+BEGIN
+  ORDS.enable_object (
+    p_enabled      => TRUE, -- Default  { TRUE | FALSE }
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'ORGANISATEUR',
+    p_object_type  => 'TABLE', -- Default  { TABLE | VIEW }
+    p_object_alias => 'organisateur'
+  );
+    
+  COMMIT;
+END;
+/
+
+-- Activation de la table representation pour acces REST
+BEGIN
+  ORDS.enable_object (
+    p_enabled      => TRUE, -- Default  { TRUE | FALSE }
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'REPRESENTATION',
+    p_object_type  => 'TABLE', -- Default  { TABLE | VIEW }
+    p_object_alias => 'representation'
+  );
+    
+  COMMIT;
+END;
+/
+
+-- Activation de la table utilisateur pour acces REST
+BEGIN
+  ORDS.enable_object (
+    p_enabled      => TRUE, -- Default  { TRUE | FALSE }
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'UTILISATEUR',
+    p_object_type  => 'TABLE', -- Default  { TABLE | VIEW }
+    p_object_alias => 'utilisateur'
+  );
+    
+  COMMIT;
+END;
+/
+
+-- Confirmation de l'activation du schema
 SELECT *
-FROM UTILISATEUR;
+FROM user_ords_schemas;
 
+-- Confirmation de l'activation des tables pour REST
+SELECT *
+FROM   user_ords_enabled_objects;
 
-ALTER TABLE billet
-    ADD CONSTRAINT billet_representation_fk FOREIGN KEY ( representation_id_representation )
-        REFERENCES representation ( id_representation );
-
-ALTER TABLE organisateur
-    ADD CONSTRAINT organisateur_evenement_fk FOREIGN KEY ( evenement_id_evenement )
-        REFERENCES evenement ( id_evenement );
-
-
-ALTER TABLE utilisateur
-    ADD CONSTRAINT utilisateur_evenement_fk FOREIGN KEY ( evenement_id_evenement )
-        REFERENCES evenement ( id_evenement );
-
-ALTER TABLE representation
-    ADD CONSTRAINT representation_evenement_fk FOREIGN KEY ( evenement_id_evenement )
-        REFERENCES evenement ( id_evenement );
-
-
-
-
-
-
--- Oracle SQL Developer Data Modeler Summary Report: 
--- 
+-- Oracle SQL Developer Data Modeler Summary Report:
+--
 -- CREATE TABLE                             7
 -- CREATE INDEX                             0
 -- ALTER TABLE                             13
@@ -187,15 +454,15 @@ ALTER TABLE representation
 -- CREATE SYNONYM                           0
 -- CREATE TABLESPACE                        0
 -- CREATE USER                              0
--- 
+--
 -- DROP TABLESPACE                          0
 -- DROP DATABASE                            0
--- 
+--
 -- REDACTION POLICY                         0
--- 
+--
 -- ORDS DROP SCHEMA                         0
 -- ORDS ENABLE SCHEMA                       0
 -- ORDS ENABLE OBJECT                       0
--- 
+--
 -- ERRORS                                   1
 -- WARNINGS                                 0
