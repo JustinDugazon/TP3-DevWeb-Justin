@@ -334,95 +334,93 @@ ALTER TABLE REPRESENTATION ADD CONSTRAINT REPRESENTATION_EVENEMENT_FK FOREIGN KE
 
 -- Ceci va creer un URI sous le URL qui pourra etre utilise pour y activer les tables en mode REST
 BEGIN
-  ORDS.enable_schema(
-    p_enabled             => TRUE,
-    p_schema              => 'RESTSCOTT',
-    p_url_mapping_type    => 'BASE_PATH',
-    p_url_mapping_pattern => 'hr2',
-    p_auto_rest_auth      => FALSE
-  );
-    
-  COMMIT;
+    ORDS.ENABLE_SCHEMA(
+        P_ENABLED => TRUE,
+        P_SCHEMA => 'RESTSCOTT',
+        P_URL_MAPPING_TYPE => 'BASE_PATH',
+        P_URL_MAPPING_PATTERN => 'hr2',
+        P_AUTO_REST_AUTH => FALSE
+    );
+    COMMIT;
 END;
 /
 
 -- Activation de la table billet pour acces REST
 BEGIN
-  ORDS.enable_object (
-    p_enabled      => TRUE, -- Default  { TRUE | FALSE }
-    p_schema       => 'RESTSCOTT',
-    p_object       => 'BILLET',
-    p_object_type  => 'TABLE', -- Default  { TABLE | VIEW }
-    p_object_alias => 'billet'
-  );
-    
-  COMMIT;
+    ORDS.ENABLE_OBJECT (
+        P_ENABLED => TRUE, -- Default  { TRUE | FALSE }
+        P_SCHEMA => 'RESTSCOTT',
+        P_OBJECT => 'BILLET',
+        P_OBJECT_TYPE => 'TABLE', -- Default  { TABLE | VIEW }
+        P_OBJECT_ALIAS => 'billet'
+    );
+    COMMIT;
 END;
 /
 
 -- Activation de la table evenement hotel pour acces REST
 BEGIN
-  ORDS.enable_object (
-    p_enabled      => TRUE, -- Default  { TRUE | FALSE }
-    p_schema       => 'RESTSCOTT',
-    p_object       => 'EVENEMENT',
-    p_object_type  => 'TABLE', -- Default  { TABLE | VIEW }
-    p_object_alias => 'evenement'
-  );
-    
-  COMMIT;
+    ORDS.ENABLE_OBJECT (
+        P_ENABLED => TRUE, -- Default  { TRUE | FALSE }
+        P_SCHEMA => 'RESTSCOTT',
+        P_OBJECT => 'EVENEMENT',
+        P_OBJECT_TYPE => 'TABLE', -- Default  { TABLE | VIEW }
+        P_OBJECT_ALIAS => 'evenement'
+    );
+    COMMIT;
 END;
 /
 
 -- Activation de la table organisateur pour acces REST
 BEGIN
-  ORDS.enable_object (
-    p_enabled      => TRUE, -- Default  { TRUE | FALSE }
-    p_schema       => 'RESTSCOTT',
-    p_object       => 'ORGANISATEUR',
-    p_object_type  => 'TABLE', -- Default  { TABLE | VIEW }
-    p_object_alias => 'organisateur'
-  );
-    
-  COMMIT;
+    ORDS.ENABLE_OBJECT (
+        P_ENABLED => TRUE, -- Default  { TRUE | FALSE }
+        P_SCHEMA => 'RESTSCOTT',
+        P_OBJECT => 'ORGANISATEUR',
+        P_OBJECT_TYPE => 'TABLE', -- Default  { TABLE | VIEW }
+        P_OBJECT_ALIAS => 'organisateur'
+    );
+    COMMIT;
 END;
 /
 
 -- Activation de la table representation pour acces REST
 BEGIN
-  ORDS.enable_object (
-    p_enabled      => TRUE, -- Default  { TRUE | FALSE }
-    p_schema       => 'RESTSCOTT',
-    p_object       => 'REPRESENTATION',
-    p_object_type  => 'TABLE', -- Default  { TABLE | VIEW }
-    p_object_alias => 'representation'
-  );
-    
-  COMMIT;
+    ORDS.ENABLE_OBJECT (
+        P_ENABLED => TRUE, -- Default  { TRUE | FALSE }
+        P_SCHEMA => 'RESTSCOTT',
+        P_OBJECT => 'REPRESENTATION',
+        P_OBJECT_TYPE => 'TABLE', -- Default  { TABLE | VIEW }
+        P_OBJECT_ALIAS => 'representation'
+    );
+    COMMIT;
 END;
 /
 
 -- Activation de la table utilisateur pour acces REST
 BEGIN
-  ORDS.enable_object (
-    p_enabled      => TRUE, -- Default  { TRUE | FALSE }
-    p_schema       => 'RESTSCOTT',
-    p_object       => 'UTILISATEUR',
-    p_object_type  => 'TABLE', -- Default  { TABLE | VIEW }
-    p_object_alias => 'utilisateur'
-  );
-    
-  COMMIT;
+    ORDS.ENABLE_OBJECT (
+        P_ENABLED => TRUE, -- Default  { TRUE | FALSE }
+        P_SCHEMA => 'RESTSCOTT',
+        P_OBJECT => 'UTILISATEUR',
+        P_OBJECT_TYPE => 'TABLE', -- Default  { TABLE | VIEW }
+        P_OBJECT_ALIAS => 'utilisateur'
+    );
+    COMMIT;
 END;
 /
 
 -- Confirmation de l'activation du schema
-SELECT *
-FROM user_ords_schemas;
+SELECT
+    *
+FROM
+    USER_ORDS_SCHEMAS;
 
 -- Confirmation de l'activation des tables pour REST
-SELECT *
-FROM   user_ords_enabled_objects;
+SELECT
+    *
+FROM
+    USER_ORDS_ENABLED_OBJECTS;
 
 -- Oracle SQL Developer Data Modeler Summary Report:
 --
