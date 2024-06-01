@@ -136,3 +136,30 @@ window.onload = function() {
     const idUtilisateur = urlParams.get('id');
     afficherDetailsUtilisateur(idUtilisateur);
 };
+
+// Fonction pour récupérer les détails de l'organisateur
+async function recupererDetailsOrganisateur(idOrganisateur) {
+    const response = await fetch(`http://127.0.0.1:5500/ords/hr2/organisateur/${idOrganisateur}`);
+    const organisateur = await response.json();
+    return organisateur;
+}
+
+// Fonction pour afficher les détails de l'organisateur sur la page
+async function afficherDetailsOrganisateur(idOrganisateur) {
+    const organisateur = await recupererDetailsOrganisateur(idOrganisateur);
+    const detailsOrganisateurElement = document.getElementById('DetailsOrganisateur');
+
+    // Création des éléments HTML pour afficher les détails de l'organisateur
+    const nomOrganisateur = document.createElement('h2');
+    nomOrganisateur.textContent = `Nom de l'organisateur: ${organisateur.nom_organisateur}`;
+    detailsOrganisateurElement.appendChild(nomOrganisateur);
+
+    // Ajoutez plus d'éléments pour la liste des événements organisés, si nécessaire
+}
+
+// Appel de la fonction afficherDetailsOrganisateur lors du chargement de la page
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const idOrganisateur = urlParams.get('id');
+    afficherDetailsOrganisateur(idOrganisateur);
+};
