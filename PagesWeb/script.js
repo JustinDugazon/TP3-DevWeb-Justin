@@ -65,7 +65,7 @@ async function afficherEvenements() {
 window.onload = afficherEvenements;
 
 async function recupererDetailsEvenement(idEvenement) {
-    const response = await fetch(`'http://127.0.0.1:5500/ords/hr2/organisateur/'${idEvenement}`);
+    const response = await fetch(`http://127.0.0.1:5500/ords/hr2/evenement/${idEvenement}`);
     const evenement = await response.json();
     return evenement;
 }
@@ -104,4 +104,35 @@ window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
     const idEvenement = urlParams.get('id');
     afficherDetailsEvenement(idEvenement);
+};
+
+// Fonction pour récupérer les détails de l'utilisateur
+async function recupererDetailsUtilisateur(idUtilisateur) {
+    const response = await fetch(`http://127.0.0.1:5500/ords/hr2/utilisateur/${idUtilisateur}`);
+    const utilisateur = await response.json();
+    return utilisateur;
+}
+
+// Fonction pour afficher les détails de l'utilisateur sur la page
+async function afficherDetailsUtilisateur(idUtilisateur) {
+    const utilisateur = await recupererDetailsUtilisateur(idUtilisateur);
+    const detailsUtilisateurElement = document.getElementById('Details');
+
+    // Création des éléments HTML pour afficher les détails de l'utilisateur
+    const nomUtilisateur = document.createElement('h2');
+    nomUtilisateur.textContent = `Nom d'utilisateur: ${utilisateur.nom_utilisateur}`;
+    detailsUtilisateurElement.appendChild(nomUtilisateur);
+
+    const emailUtilisateur = document.createElement('p');
+    emailUtilisateur.textContent = `Email: ${utilisateur.email}`;
+    detailsUtilisateurElement.appendChild(emailUtilisateur);
+
+    
+}
+
+// Appel de la fonction afficherDetailsUtilisateur lors du chargement de la page
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const idUtilisateur = urlParams.get('id');
+    afficherDetailsUtilisateur(idUtilisateur);
 };
