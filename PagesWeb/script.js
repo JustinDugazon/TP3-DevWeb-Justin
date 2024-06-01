@@ -52,7 +52,7 @@ function creerElementEvenement(evenement, organisateurs) {
 
 // Fonction pour afficher les événements sur la page
 async function afficherEvenements() {
-    const listeEvenements = document.getElementById('eventList');
+    const listeEvenements = document.getElementById('ListeEvenements');
     const evenements = await recupererEvenements();
     const organisateurs = await recupererOrganisateurs();
 
@@ -63,3 +63,45 @@ async function afficherEvenements() {
 }
 
 window.onload = afficherEvenements;
+
+async function recupererDetailsEvenement(idEvenement) {
+    const response = await fetch(`'http://127.0.0.1:5500/ords/hr2/organisateur/'${idEvenement}`);
+    const evenement = await response.json();
+    return evenement;
+}
+
+// Fonction pour afficher les détails de l'événement sur la page
+async function afficherDetailsEvenement(idEvenement) {
+    const evenement = await recupererDetailsEvenement(idEvenement);
+    const detailsEvenementElement = document.getElementById('DetailsEvenement');
+
+// Création des éléments HTML pour afficher les détails de l'événement
+    const nomEvenement = document.createElement('h2');
+    nomEvenement.textContent = evenement.nom_evenement;
+    detailsEvenementElement.appendChild(nomEvenement);
+
+    const descriptionEvenement = document.createElement('p');
+    descriptionEvenement.textContent = evenement.description;
+    detailsEvenementElement.appendChild(descriptionEvenement);
+
+    const dateEvenement = document.createElement('p');
+    dateEvenement.textContent = `Date: ${evenement.date}`;
+    detailsEvenementElement.appendChild(dateEvenement);
+
+    const heureEvenement = document.createElement('p');
+    heureEvenement.textContent = `Heure: ${evenement.heure}`;
+    detailsEvenementElement.appendChild(heureEvenement);
+
+    const lieuEvenement = document.createElement('p');
+    lieuEvenement.textContent = `Lieu: ${evenement.lieu}`;
+    detailsEvenementElement.appendChild(lieuEvenement);
+
+    
+}
+
+// Appel de la fonction afficherDetailsEvenement lors du chargement de la page
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const idEvenement = urlParams.get('id');
+    afficherDetailsEvenement(idEvenement);
+};
